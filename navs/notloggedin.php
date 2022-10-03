@@ -1,5 +1,7 @@
+<div class='topdiv'>
+    <a class='homebutton' href='#'><h2 class='logotext1'>Framtiden Inc.</h2><h2 class='logotext2'>⋒</h2><h2 class='logotext3'>Framtiden är imorgon, sov tills dess.</h2></a>
 <!-- Button to open the modal login form -->
-<div class="logindiv"><img onclick="toggleLogIn()" class="avatarbutton" src="../assets/th-3077032434.jpg" height="20px"><button onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button><button onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button></div>
+<div class="logindiv"><img onclick="toggleLogIn()" class="avatarbutton" src="assets/th-3077032434.jpg" height="20px"><button onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button><button onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button></div>
 <!-- The Modal -->
 <div id="id02" class="modal">
   <span onclick="document.getElementById('id02').style.display='none'"
@@ -44,11 +46,11 @@
         </div>
 
         <div class="container">
-            <label for="loginemail"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="logemail"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="logemail" required>
 
-            <label for="loginpsw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="pwd" required>
+            <label for="logpwd"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="logpwd" required>
 
             <button type="submit" name="submit">Login</button>
             <label>
@@ -62,5 +64,5 @@
         </div>
     </form>
 </div>
-<div class="loginorregister" id="loginorRegister" style="height: 15%; display: none;"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button><button class="registerbutton"onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button></div>
 </div>
+<div class="loginorregister" id="loginorRegister" style="height: 15%; display: none;"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button><button class="registerbutton"onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button></div>

@@ -11,6 +11,9 @@ session_start();
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navnotloggedin.css">
+    <link rel="stylesheet" href="css/navloggedin.css">
+    <link rel="stylesheet" href="css/mediascreen.css">
     <title>hemsida</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <script type="text/javascript" src="js/script.js" defer></script>

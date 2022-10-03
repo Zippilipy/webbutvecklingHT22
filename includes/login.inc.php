@@ -2,8 +2,8 @@
 
     if (isset($_POST["submit"])) {    //checking if the user acceses this page the proper way, superglobal POST
         
-        $email = $_POST["email"];  //if the user passed in a uid
-        $pwd = $_POST["pwd"];   
+        $email = $_POST["logemail"];  //if the user passed in a uid
+        $pwd = $_POST["logpwd"];
 
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';
