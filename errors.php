@@ -21,5 +21,8 @@
       elseif ($_GET["error"] == "invalidLogin") {
         echo "<p class=\"errors\">Det gick inte, testa igen!</p>";
     }
+      elseif ($_GET["error"] == "wrongLogin") {
+          echo "<p class=\"errors\">Det gick inte, testa igen!</p>";
+      }
       
   }

@@ -22,13 +22,12 @@ function toggleDropdown() {
 }
 
 function toggleLogIn(){
-    if (loginorregister.style.display === "block") {
+    if (loginorregister.style.display === "flex") {
         loginorregister.style.display = "none";
         loginbutton.style.display = "none";
         registerbutton.style.display = "none";
     } else {
-        loginorregister.style.display = "block";
-        loginorregister.style.display = "block";
+        loginorregister.style.display = "flex";
         loginbutton.style.display = "inline-block";
         registerbutton.style.display = "inline-block";
     }
