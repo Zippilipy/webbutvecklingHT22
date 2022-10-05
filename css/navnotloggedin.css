@@ -174,3 +174,7 @@ span.psw {
 .loginbutton, .registerbutton{
     display: none;
 }
+.loginorregister{
+    height: 15%;
+    justify-content: right;
+}

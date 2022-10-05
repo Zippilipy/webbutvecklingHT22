@@ -1,10 +1,7 @@
 <nav class="nav">
         <?php
         if (isset($_SESSION["userUid"])) {  //checking if there is a user logged in
-            echo "<div class='topdiv'><a class='homebutton' href='#'><h2 class='logotext1'>Framtiden Inc.</h2><h2 class='logotext2'>⋒</h2><h2 class='logotext3'>Framtiden är imorgon, sov tills dess.</h2></a>";
-            echo "<div><li class='name'><a href=\"profile.php\">" . ucfirst($_SESSION["userUid"]) . "</a></li>"; //ucfirst = versal som första
-            echo "<li class='logoutbutton'><a href=\"includes/logout.inc.php\"><button style='width: auto; margin: 1rem;'>Logga ut</button></a></li></div>";
-            echo "</div>";
+            include_once 'navloggedin.php';
         }
         else {
             include_once 'notloggedin.php';

@@ -1,10 +1,10 @@
 <div class='topdiv'>
     <a class='homebutton' href='#'><h2 class='logotext1'>Framtiden Inc.</h2><h2 class='logotext2'>⋒</h2><h2 class='logotext3'>Framtiden är imorgon, sov tills dess.</h2></a>
 <!-- Button to open the modal login form -->
-<div class="logindiv"><img onclick="toggleLogIn()" class="avatarbutton" src="assets/th-3077032434.jpg" height="20px"><button onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button><button onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button></div>
+<div class="logindiv"><img onclick="toggleLogIn()" class="avatarbutton" src="assets/th-3077032434.jpg" height="20px"><button onclick="selectModal('id02', 'block')" style="width: auto; margin: 1rem;">Register</button><button onclick="selectModal('id01', 'block')" style="width: auto; margin: 1rem;">Login</button></div>
 <!-- The Modal -->
 <div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'"
+  <span onclick="selectModal('id01', 'none')"
         class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
@@ -29,14 +29,14 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="selectModal('id01', 'none')" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>
 
 
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
+  <span onclick="selectModal('id01', 'none')"
         class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
@@ -59,10 +59,10 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="selectModal('id01', 'none')" class="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
 </div>
 </div>
-<div class="loginorregister" id="loginorRegister" style="height: 15%; display: none;"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" style="width: auto; margin: 1rem;">Login</button><button class="registerbutton"onclick="document.getElementById('id02').style.display='block'" style="width: auto; margin: 1rem;">Register</button></div>
+<div class="loginorregister" id="loginorRegister" style="display: none;"><button class="registerbutton" onclick="selectModal('id02', 'block')" style="width: auto; margin: 1rem;">Register</button><button class="loginbutton" onclick="selectModal('id01', 'block')" style="width: auto; margin: 1rem;">Login</button></div>

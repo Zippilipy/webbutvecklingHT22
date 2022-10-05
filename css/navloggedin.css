@@ -5,3 +5,9 @@
     display: flex;
     align-items: center;
 }
+.userandbutton{
+    display: flex;
+}
+.user:hover{
+    cursor: pointer
+}

@@ -33,6 +33,10 @@ function toggleLogIn(){
     }
 }
 
+function selectModal(id, display) {
+    document.getElementById(id).style.display=display
+}
+
 document.querySelectorAll(".modal").forEach(el => {
     el.addEventListener("click", evt => {
         if (evt.target.classList.contains("modal")) evt.target.style.display = "none"
