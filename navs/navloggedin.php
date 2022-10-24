@@ -4,7 +4,11 @@
         <h2 class='logotext2'>⋒</h2>
         <h2 class='logotext3'>Framtiden är imorgon, sov tills dess.</h2>
     </a>
-        <?php echo "<div class='userandbutton'><li class='name'><a class='user' onclick=\"selectModal('id03', 'block')\">" . ucfirst($_SESSION["userUid"]) . "</a></li>"; //ucfirst = versal som första ?>
+    <form class="searchbar"action="/action_page.php">
+        <input class="search"type="text" placeholder="Search.." name="search">
+        <button class="searchbutton"type="submit"><i class="fa fa-search"></i></button>
+    </form>
+        <?php echo "<div class='userandbutton'><li class='name'><a class='user' onclick=\"selectModal('id03', 'block')\">" . htmlspecialchars(ucfirst($_SESSION["userUid"])) . "</a></li>"; //ucfirst = versal som första ?>
         <li class='logoutbutton'><a href="includes/logout.inc.php">
                 <button style='width: auto; margin: 1rem;'>Logga ut</button>
             </a></li>
@@ -15,27 +19,32 @@
         class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
-    <form class="modal-content animate" action="includes/login.inc.php" method="post">
+    <form class="modal-content animate" action="includes/update.php" method="post">
         <div class="imgcontainer">
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
-        <div class="container">
-            <label for="logemail"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="logemail" required>
+        <?php echo "<div class='container'>
+            <label for='cuser'><b>Change Username</b>
+                <input type='text' placeholder='Enter New Username' name='cuser' value='". htmlspecialchars($_SESSION["userUid"]) ."'></label>
 
-            <label for="logpwd"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="logpwd" required>
+            <label for='cemail'><b>Change Email</b>
+                <input type='text' placeholder='Enter New Email' name='cemail' value='". htmlspecialchars($_SESSION["userEmail"]) ."'></label>
 
-            <button type="submit" name="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
+            <label for='cpassword'><b>Change Password</b>
+                <input type='password' placeholder='Enter New Password' name='cpassword'></label>
+
+            <label for='cpasswordconf'><b>Repeat Change Password</b>
+                <input type='password' placeholder='Enter New Password' name='cpasswordconf'></label>
+
+            <label for='cpasswordold'><b>Old Password</b>
+                <input type='password' placeholder='Enter Old Password' name='cpasswordold' required></label>
+
+            <button type='submit' name='submit'>Change</button>
+        </div>"?>
 
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
 </div>

@@ -1,5 +1,10 @@
 <div class='topdiv'>
     <a class='homebutton' href='#'><h2 class='logotext1'>Framtiden Inc.</h2><h2 class='logotext2'>⋒</h2><h2 class='logotext3'>Framtiden är imorgon, sov tills dess.</h2></a>
+    <form class="searchbar"action="/action_page.php">
+        <input class="search"type="text" placeholder="Search.." name="search">
+        <button class="searchbutton"type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <!--<input class="search" type="text" placeholder="Search..">-->
 <!-- Button to open the modal login form -->
 <div class="logindiv"><img onclick="toggleLogIn()" class="avatarbutton" src="assets/th-3077032434.jpg" height="20px"><button onclick="selectModal('id02', 'block')" style="width: auto; margin: 1rem;">Register</button><button onclick="selectModal('id01', 'block')" style="width: auto; margin: 1rem;">Login</button></div>
 <!-- The Modal -->
@@ -46,11 +51,11 @@
         </div>
 
         <div class="container">
-            <label for="logemail"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="logemail" required>
+            <label for="logemail"><b>Email</b>
+            <input type="text" placeholder="Enter Email" name="logemail" required></label>
 
-            <label for="logpwd"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="logpwd" required>
+            <label for="logpwd"><b>Password</b>
+            <input type="password" placeholder="Enter Password" name="logpwd" required></label>
 
             <button type="submit" name="submit">Login</button>
             <label>

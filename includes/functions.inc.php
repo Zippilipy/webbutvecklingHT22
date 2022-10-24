@@ -113,7 +113,7 @@ function emptyInputLogin($username, $pwd) { //se även login.inc.php
 }
 
 function loginUser($conn, $email, $pwd) {    //se även login.inc.php
-    $uidExists = uidExists($conn, $email, $email); //ena för username, andra för epost
+    $uidExists = uidExists($conn, $email);
 
     //errorhandling
     if ($uidExists === false) {
@@ -134,8 +134,9 @@ function loginUser($conn, $email, $pwd) {    //se även login.inc.php
     elseif ($checkPwd === true) {
         session_start();
         //create session variables (superglobals)
-        $_SESSION["userid"] = $uidExists["usersId"];
+        $_SESSION["userid"] = $uidExists["usersID"];
         $_SESSION["userUid"] = $uidExists["usersUid"];
+        $_SESSION["userEmail"] = $uidExists["usersEmail"];
         header("location: ../index.php");
     }
 }

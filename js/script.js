@@ -13,10 +13,10 @@ sideBar.addEventListener("mouseleave", toggleDropdown)
 let dropdown = document.getElementById("sideBar");
 
 function toggleDropdown() {
-    if (dropdown.style.height === "30%") {
+    if (dropdown.style.height === "10rem") {
         dropdown.style.height = "0";
     } else {
-        dropdown.style.height = "30%";
+        dropdown.style.height = "10rem";
         dropdown.style.display = "block";
     }
 }
